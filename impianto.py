@@ -6,7 +6,7 @@ class ImpiantoSolare:
         self.localita = localita
         self.potenza_massima_kw = potenza_massima_kw
         self.stato = stato
-        self.pannelli: list[PannelloFotovoltaico]
+        self.pannelli: list[PannelloFotovoltaico] = []
         
     def aggiungi_pannello(self, pannello: PannelloFotovoltaico) -> None:
         self.pannelli.append(pannello)
