@@ -33,4 +33,11 @@ class ImpiantoSolare:
                 return pannello
         return None
     
+    def pannelli_sotto_potenza(self, potenza_massima: float) -> list[PannelloFotovoltaico]:
+        pannelli: list[PannelloFotovoltaico]
+        for p in self.pannelli:
+            if p.potenza_kw <= potenza_massima:
+                pannelli.append(p)
+                
+        return pannelli
     
