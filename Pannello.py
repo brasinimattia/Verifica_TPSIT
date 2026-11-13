@@ -1,4 +1,4 @@
-class Pannello:
+class PannelloFotovoltaico:
     def __init__(self, codice: str, modello: str, potenza_kw: float)-> None :
         self.codice = codice
         self.modello = modello
