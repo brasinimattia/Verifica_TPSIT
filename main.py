@@ -31,22 +31,39 @@ if __name__=="__main__":
     registra_impianto(impianti, impianto3)
     registra_impianto(impianti, impianto4)
     
-    for i in range(1,5):
-        pannello1 =  PannelloFotovoltaico(f"pannello{i}" ,f"modello{i}", (5.0 + i))
-        pannello2 = PannelloFotovoltaico(f"pannello{i+10}" ,f"modello{i+10}", (5.0 + i+10))
-        impianti[i].aggiungi_pannello(pannello1)
-        impianti[i].aggiungi_pannello(pannello2)
+    pannello1 =  PannelloFotovoltaico("pannello1" ,"modello1", (6.0))
+    pannello2 = PannelloFotovoltaico("pannello2" ,"modello2", (7.0))
+    pannello3 =  PannelloFotovoltaico("pannello3" ,"modello3", (8.0))
+    pannello4 = PannelloFotovoltaico("pannello4" ,"modello4", (9.0))
+    pannello5 =  PannelloFotovoltaico("pannello5" ,"modello5", (10.0))
+    pannello6 = PannelloFotovoltaico("pannello6" ,"modello6", (11.0))
+    pannello7 =  PannelloFotovoltaico("pannello7" ,"modello7", (12.0))
+    pannello8 = PannelloFotovoltaico("pannello8" ,"modello8", (57.0))
+    impianti[0].aggiungi_pannello(pannello1)
+    impianti[0].aggiungi_pannello(pannello2)
+    impianti[1].aggiungi_pannello(pannello3)
+    impianti[1].aggiungi_pannello(pannello4)
+    impianti[2].aggiungi_pannello(pannello5)
+    impianti[2].aggiungi_pannello(pannello6)
+    impianti[3].aggiungi_pannello(pannello7)
+    impianti[3].aggiungi_pannello(pannello8)
         
-    riepilogo_impianti(impianti)
+    riepilogo_impianti("Azienda Pascal", impianti)
     print(cerca_impianto(impianti, "primo"))
     print(cerca_impianto(impianti, "quinto"))
           
-    print(impianti[1].cerca_pannello("pannello34450"))
+    print(impianti[0].cerca_pannello("pannello34450"))
     
-    print(impianti[1].pannelli_sotto_potenza, 1000000000.5)
+    print(impianti[0].pannelli_sotto_potenza, 1000000000.5)
     
-    p = impianti[1].cerca_pannello("pannello1")
-    p = impianti[1].rimuovi_pannello("pannello1")
+    p1 = impianti[0].cerca_pannello("pannello1")
+    p2 = impianti[0].rimuovi_pannello("pannello1")
+    
+    print(p1)
+    print(p2)
+    
+    
+    
     
     
     
