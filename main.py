@@ -43,6 +43,10 @@ if __name__=="__main__":
           
     print(impianti[1].cerca_pannello("pannello34450"))
     
+    print(impianti[1].pannelli_sotto_potenza, 1000000000.5)
+    
+    p = impianti[1].cerca_pannello("pannello1")
+    p = impianti[1].rimuovi_pannello("pannello1")
     
     
     
